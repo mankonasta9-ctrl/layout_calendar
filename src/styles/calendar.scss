@@ -11,7 +11,9 @@
 
   @each $day, $i in $days {
     &--start-day-#{$day} {
-      margin-left: calc(($day-width + $day-gap) * #{$i});
+      .calendar__day:first-child {
+        margin-left: calc(($day-width + $day-gap) * #{$i});
+      }
     }
   }
 
